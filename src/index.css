@@ -1,13 +1,285 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+main {
+	margin: 0 auto;
+	max-width: 90%;
+    padding: 50px 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --red: #C60000ff;
+    --grey: #444442ff;
+    --light: #9F9F9Dff;
+    --white: #DADAD8ff;
+    --dark: #000000ff;
+    --darker: #111111;
+    --error: rgb(228, 46, 1);
+    --spacing-one: calc(1rem * 0.5);
+    --spacing-two: calc(1rem);
+    --spacing-five: calc(2.5rem);
+
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light);
+}
+
+/* header styles */
+header {
+    background-size: cover;
+    background-position: 100%;
+    padding: 20px 35px 20px 0;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    background-color: var(--light);
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--red);
+    margin: 0 10px 0 70px;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header ul li a {
+    color: var(--red);
+    font-size: 27px;
+    padding: 10px 75px;
+}
+/* header styles end */
+
+/* hero styles */
+.hero {
+    background-image: url("./assets/cover/profile-pic.jpeg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    background-attachment: relative;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.hero h2 {
+    margin: 3.5%;
+    padding: 10px;
+    background-color: var(--grey);
+    color: var(--red);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 31px;
+}
+/* hero styles end */
+
+/* section titles styles */
+.section-title {
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    width: 15%;
+    text-align: right;
+    font-weight: bold;
+    color: var(--red);
+    border-right: 3px solid var(--red);
+}
+/* section titles styles end */
+
+/* about-me section styles */
+.intro {
+    color: var(--red);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.intro p {
+    margin: 0px;
+    padding: 10px;
+    width: 70%;
+    font-style: normal;
+    font-size: 21px;
+    display: flex;
+}
+/* about-me section styles end */
+
+/* my-work section styles */
+#my-work {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.projects {
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+    border: 5px solid var(--red);
+}
+
+.project-name {
+    padding: 0 10px;
+    height: 75px;
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: var(--grey);
+    color: var(--red);
+}
+
+.project-name a {
+    color: var(--red);
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.project-name p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#main-project {
+    background-image: url(./assets/projects/run-buddy-pic.jpeg);
+    width: 90%;
+    height: 600px;
+}
+
+#main-project .project-name {
+    margin-top: 450px;
+}
+
+#horiseon-project {
+    background-image: url(./assets/projects/horiseon-pic.jpeg);
+    height: 300px;
+    width: 42%;
+}
+
+#horiseon-project .project-name {
+    margin-top: 200px;
+}
+
+#robot-gladiators-project {
+    background-image: url(./assets/projects/robot-gladiators-pic.jpeg);
+    height: 300px;
+    width: 42%;
+}
+
+#robot-gladiators-project .project-name,
+#weather-dashboard-project .project-name,
+#where2watch-project .project-name {
+    margin-top: 200px;
+    width: 300px;
+}
+
+.projects:hover {
+    opacity: .3;
+}
+
+#weather-dashboard-project {
+    background-image: url(./assets/projects/weather-dashboard.png);
+    height: 300px;
+    width: 42%;
+}
+
+#where2watch-project {
+    background-image: url(./assets/projects/where2watch.png);
+    height: 300px;
+    width: 42%;
+}
+
+#recipe-rendezvous {
+    background-image: url(./assets/projects//Recipe-Rendezvous.png);
+    height: 300px;
+    width: 42%;
+}
+
+#recipe-rendezvous .project-name {
+    margin-top: 175px;
+    width: 300px;
+    height: 100px;
+}
+/* my-work section styles end */
+
+/* contact-me section styles */
+.contact {
+    display: flex;
+}
+
+.contact address {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--red);
+    align-content: flex-start;
+}
+/* contact-me section styles end */
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header ul li a {
+        padding: 10px;
+    }
+
+    .projects {
+        background-size: contain;
+    }
+
+    #main-project {
+        height: 350px;
+    }
+    
+    #main-project .project-name {
+        margin-top: 250px;
+    }
+    
+    #horiseon-project,
+    #robot-gladiators-project {
+        height: 175px;
+    }
+    
+    #horiseon-project .project-name,
+    #robot-gladiators-project .project-name {
+        margin-top: 85px;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {}
