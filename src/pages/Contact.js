@@ -59,6 +59,10 @@ function Contact() {
                 )}
                 <button type="submit">Submit</button>
             </form>
+            <ul>
+                <li>Phone: 574-536-3080</li>
+                <li>Email: lancyb@281@gmail.com</li>
+            </ul>
         </div>
     );
 }
