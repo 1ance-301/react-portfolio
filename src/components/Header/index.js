@@ -54,9 +54,6 @@ function Header() {
                     </ul>
                 </nav>
             </header>
-            <main>
-                <Nav />
-            </main>
         </div>
     );
 }
