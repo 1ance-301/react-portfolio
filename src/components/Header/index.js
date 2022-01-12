@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import About from "../../pages/About";
-import Contact from "../../pages/Contact";
-import Resume from "../../pages/Resume";
 import { capitalizeFirstLetter } from "../../utils/helpers";
-import Nav from "../Nav";
-import Project from "../Project";
 
 function Header() {
     const [categories] = useState([
@@ -35,10 +30,10 @@ function Header() {
                     Lance Bontrager
                 </a>
                 <nav>
-                    <ul className="flex-row">
+                    <ul>
                         {categories.map((category) => (
                             <li
-                                className={`mx-1 ${currentCategory.name === category.name && `navActive`
+                                className={`${currentCategory.name === category.name && `navActive`
                                     }`}
                                 key={category.name}
                             >
